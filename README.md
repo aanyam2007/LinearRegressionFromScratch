@@ -18,22 +18,14 @@ The goal is to demonstrate a clear understanding of the **mathematics, optimizat
 ## Mathematical Formulation
 
 ### Model
-\[
-\hat{y} = Xw + b
-\]
+Model: ŷ = Xw + b
 
-### Loss Function (Mean Squared Error)
-\[
-J(w, b) = \frac{1}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)^2
-\]
+Loss Function (MSE):
+J(w, b) = (1/n) Σ (ŷ − y)²
 
-### Gradients
-\[
-dw = \frac{1}{n} X^T(\hat{y} - y)
-\]
-\[
-db = \frac{1}{n} \sum(\hat{y} - y)
-\]
+Gradients:
+dw = (1/n) Xᵀ (ŷ − y)  
+db = (1/n) Σ (ŷ − y)
 
 ---
 
