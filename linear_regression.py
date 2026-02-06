@@ -6,6 +6,7 @@ class LinearRegression:
         self.iter=iter
         self.w=None
         self.b=None
+        self.losses = []
 
     def fit(self,x,y):
         samples,features=x.shape
@@ -17,6 +18,10 @@ class LinearRegression:
         #gradient descent
         for i in range(self.iter):
             y_pred=np.dot(x, self.w)+self.b
+
+            # MSE loss
+            loss = np.mean((y_pred - y) ** 2)
+            self.losses.append(loss)
 
             # gradients
             dw=(1/samples)*np.dot(x.T,(y_pred-y))
